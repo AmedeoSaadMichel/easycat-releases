@@ -3,6 +3,8 @@
 Cut. Transform. Meow. Local video trimming, compression and container conversion.
 This repository distributes binaries and third-party source materials only. The easycat application source and development history remain private.
 
+[Choose your operating system and view installation instructions →](DOWNLOADS.md)
+
 ## Install
 
 - [macOS Apple Silicon DMG](https://github.com/AmedeoSaadMichel/easycat-releases/releases/download/v0.1.0-preview.2/easycat-0.1.0-macos-arm64-legal-preview.dmg) — macOS 15 or later; ad-hoc signed preview, not notarized.
