@@ -7,9 +7,9 @@ This repository distributes binaries and third-party source materials only. The 
 
 ## Install
 
-- [macOS Apple Silicon DMG](https://github.com/AmedeoSaadMichel/easycat-releases/releases/download/v0.1.0-preview.3/easycat-0.1.0-macos-arm64-legal-preview.dmg) — macOS 15 or later; ad-hoc signed preview, not notarized.
-- [Windows x64 ZIP](https://github.com/AmedeoSaadMichel/easycat-releases/releases/download/v0.1.0-preview.3/easycat-0.1.0-windows-x64-legal-preview.zip) — extract the entire package and run easycat.exe; unsigned preview.
-- [Linux x86_64 tar.gz](https://github.com/AmedeoSaadMichel/easycat-releases/releases/download/v0.1.0-preview.3/easycat-0.1.0-linux-x86_64-legal-preview.tar.gz) — glibc 2.35+, extract and run ./easycat.
+- [macOS Apple Silicon DMG](https://github.com/AmedeoSaadMichel/easycat-releases/releases/download/v0.1.0-preview.4/easycat-0.1.0-macos-arm64-legal-preview.dmg) — macOS 15 or later; ad-hoc signed preview, not notarized.
+- [Windows x64 ZIP](https://github.com/AmedeoSaadMichel/easycat-releases/releases/download/v0.1.0-preview.4/easycat-0.1.0-windows-x64-legal-preview.zip) — extract the entire package and run easycat.exe; unsigned preview.
+- [Linux x86_64 tar.gz](https://github.com/AmedeoSaadMichel/easycat-releases/releases/download/v0.1.0-preview.4/easycat-0.1.0-linux-x86_64-legal-preview.tar.gz) — glibc 2.35+, extract and run ./easycat.
 
 On macOS, add the personal tap once:
 
@@ -24,11 +24,17 @@ An existing easycat tap pointing to the private development repository must be u
 
 These packages contain FFmpeg under GPLv3-or-later, including GPL codec components. The easycat app runs FFmpeg as a separate executable. Third-party license rights remain intact.
 
-- [macOS dependency source](https://github.com/AmedeoSaadMichel/easycat-releases/releases/download/v0.1.0-preview.3/easycat-0.1.0-macos-third-party-source.tar.gz)
-- [Windows/Linux dependency source](https://github.com/AmedeoSaadMichel/easycat-releases/releases/download/v0.1.0-preview.3/easycat-0.1.0-portable-third-party-source.tar.gz)
-- [Rust third-party crate source](https://github.com/AmedeoSaadMichel/easycat-releases/releases/download/v0.1.0-preview.3/rust-third-party-sources.tar.gz)
-- [Checksums](https://github.com/AmedeoSaadMichel/easycat-releases/releases/download/v0.1.0-preview.3/SHA256SUMS)
+- [macOS dependency source](https://github.com/AmedeoSaadMichel/easycat-releases/releases/download/v0.1.0-preview.4/easycat-0.1.0-macos-third-party-source.tar.gz)
+- [Windows/Linux dependency source](https://github.com/AmedeoSaadMichel/easycat-releases/releases/download/v0.1.0-preview.4/easycat-0.1.0-portable-third-party-source.tar.gz)
+- [Rust third-party crate source](https://github.com/AmedeoSaadMichel/easycat-releases/releases/download/v0.1.0-preview.4/rust-third-party-sources.tar.gz)
+- [Checksums](https://github.com/AmedeoSaadMichel/easycat-releases/releases/download/v0.1.0-preview.4/SHA256SUMS)
 
 Licenses and notices are included in each installer under Licenses/ThirdParty (inside easycat.app/Contents/Resources on macOS). Preserve the source archives beside each released binary indefinitely. Publishing these materials does not publish easycat's application source.
 
 Native codec tests and the recorded source/license checks passed; see RELEASE-VERIFICATION.json for their exact scope and preview limits. Downloads and corresponding third-party sources are available in the linked preview release.
+
+## Update checks
+
+Preview 4 is the first update-aware build. It checks the public release policy at startup and through the **Updates** button. An available update can be postponed; a build below the platform minimum requires an update after any running export finishes. Failed checks preserve offline use. Download buttons open the release page; installation is manual or through Homebrew.
+
+The policy is in [updates.json](updates.json). It starts with latest build 4 and minimum build 4 on all three platforms. Preview 3 and earlier have no checker: install preview 4 manually or through Homebrew to receive future notifications. Linux requires `/usr/bin/curl` for checks; if unavailable the app remains usable. No media or file paths are sent; GitHub receives normal request connection metadata.
