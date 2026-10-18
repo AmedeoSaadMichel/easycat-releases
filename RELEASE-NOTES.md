@@ -1,9 +1,9 @@
-# easycat 0.1.0 preview 2
+# easycat 0.1.0 preview 3
 
-Native packages for macOS Apple Silicon, Windows x64 and Linux x86_64. Includes third-party licenses, notices and corresponding source archives. The easycat application source remains private.
+Adds a yellow **Buy me a coffee** support banner to the app footer, linking to https://buymeacoffee.com/asmichel. It opens the external browser only when clicked and keeps export status visible.
 
-Download the package for your system from the assets below. Keep the complete extracted directory on Windows and Linux. macOS requires version 15 or later; Linux requires glibc 2.35 or later.
+New native builds for macOS Apple Silicon, Windows x64 and Linux x86_64. Application source remains private. FFmpeg tools, bundled libraries and Rust dependency versions are unchanged from preview 2; corresponding third-party sources, build recipes, licenses and notices accompany this release.
 
-This is a test preview: macOS is ad-hoc signed and not notarized; Windows is unsigned. Native codec checks passed on all three systems. Windows/Linux source rebuild checks cover FFmpeg core, not reconstruction of every external dependency; see RELEASE-VERIFICATION.json for the recorded scope.
+Download the package for your operating system below. Extract the complete directory on Windows and Linux. Homebrew users can run `brew update` followed by `brew upgrade --cask amedeosaadmichel/easycat/easycat`.
 
-Third-party sources and build recipes are provided in the three source archives beside the installers. SHA256SUMS covers all six archives. Third-party license rights remain intact.
+This remains a preview: macOS 15+ on Apple Silicon with an ad-hoc signature, not notarized; Windows x64 unsigned; Linux x86_64 requires glibc 2.35+ and an OpenGL-capable desktop. See RELEASE-VERIFICATION.json for validation scope. SHA256SUMS covers all six installer/source archives.
