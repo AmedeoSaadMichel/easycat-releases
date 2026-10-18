@@ -2,18 +2,18 @@
 
 **Cut. Transform. Meow.** Trim, compress and change video containers on your computer. No accounts, uploads or cloud processing.
 
-Preview 4 adds update notifications and minimum supported builds. The Buy Me a Coffee support banner remains available in the footer.
+Preview 5 hides Updates when already current, while preserving update notifications and minimum supported builds. The Buy Me a Coffee support banner remains available in the footer.
 
 ## Choose your system
 
 | System | Download | Requirements / status |
 | --- | --- | --- |
-| macOS · Apple Silicon | [Download DMG](https://github.com/AmedeoSaadMichel/easycat-releases/releases/download/v0.1.0-preview.4/easycat-0.1.0-macos-arm64-legal-preview.dmg) | macOS 15 or later · preview build |
+| macOS · Apple Silicon | [Download DMG](https://github.com/AmedeoSaadMichel/easycat-releases/releases/download/v0.1.0-preview.5/easycat-0.1.0-macos-arm64-legal-preview.dmg) | macOS 15 or later · preview build |
 | macOS · Intel | Not available yet | No Intel or universal package has been built or tested |
-| Windows · x64 | [Download portable ZIP](https://github.com/AmedeoSaadMichel/easycat-releases/releases/download/v0.1.0-preview.4/easycat-0.1.0-windows-x64-legal-preview.zip) | Windows 10/11 x64 · unsigned preview |
-| Linux · x64 | [Download portable tar.gz](https://github.com/AmedeoSaadMichel/easycat-releases/releases/download/v0.1.0-preview.4/easycat-0.1.0-linux-x86_64-legal-preview.tar.gz) | glibc 2.35+ / Ubuntu 22.04+ · desktop with OpenGL |
+| Windows · x64 | [Download portable ZIP](https://github.com/AmedeoSaadMichel/easycat-releases/releases/download/v0.1.0-preview.5/easycat-0.1.0-windows-x64-legal-preview.zip) | Windows 10/11 x64 · unsigned preview |
+| Linux · x64 | [Download portable tar.gz](https://github.com/AmedeoSaadMichel/easycat-releases/releases/download/v0.1.0-preview.5/easycat-0.1.0-linux-x86_64-legal-preview.tar.gz) | glibc 2.35+ / Ubuntu 22.04+ · desktop with OpenGL |
 
-[Release details and files](https://github.com/AmedeoSaadMichel/easycat-releases/releases/tag/v0.1.0-preview.4) · [SHA-256 checksum](https://github.com/AmedeoSaadMichel/easycat-releases/releases/download/v0.1.0-preview.4/SHA256SUMS) · [Report a problem](https://github.com/AmedeoSaadMichel/easycat-releases/issues)
+[Release details and files](https://github.com/AmedeoSaadMichel/easycat-releases/releases/tag/v0.1.0-preview.5) · [SHA-256 checksum](https://github.com/AmedeoSaadMichel/easycat-releases/releases/download/v0.1.0-preview.5/SHA256SUMS) · [Report a problem](https://github.com/AmedeoSaadMichel/easycat-releases/issues)
 
 Packages are compiled and tested on native CI runners. Windows desktop interaction still needs hands-on validation; Linux startup/rendering is checked under Xvfb. Intel Mac packages will receive download links when ready. Public downloads and corresponding third-party sources are hosted in a separate distribution repository; the application source remains private.
 
@@ -46,7 +46,7 @@ This installs the same macOS preview and retains the signature limitations above
 
 The pink cat icon is embedded in the executable. Rust, Homebrew and a separate FFmpeg installation are not required. This unsigned preview may trigger a Windows security warning. An OpenGL-capable graphics driver is required.
 
-[Windows SHA-256 checksum](https://github.com/AmedeoSaadMichel/easycat-releases/releases/download/v0.1.0-preview.4/SHA256SUMS)
+[Windows SHA-256 checksum](https://github.com/AmedeoSaadMichel/easycat-releases/releases/download/v0.1.0-preview.5/SHA256SUMS)
 
 ## Install on Linux
 
@@ -60,7 +60,7 @@ cd easycat-0.1.0-linux-x86_64
 
 Keep **lib** and **Helpers** in place. Requires a Linux x86_64 desktop with glibc 2.35 or later (Ubuntu 22.04 or compatible), X11 or Wayland, an OpenGL-capable graphics driver and xdg-desktop-portal for file dialogs. FFmpeg, ffprobe and ffplay are included; Rust is not required.
 
-[Linux SHA-256 checksum](https://github.com/AmedeoSaadMichel/easycat-releases/releases/download/v0.1.0-preview.4/SHA256SUMS)
+[Linux SHA-256 checksum](https://github.com/AmedeoSaadMichel/easycat-releases/releases/download/v0.1.0-preview.5/SHA256SUMS)
 
 Windows and Linux currently use software encoding. Hardware-accelerated export is implemented for macOS only. All packages are test previews; source/build provenance is included in each archive. See [recorded verification scope](RELEASE-VERIFICATION.json).
 
@@ -73,10 +73,10 @@ Windows and Linux currently use software encoding. Hardware-accelerated export i
 
 ## Third-party software and source
 
-The application source remains private. FFmpeg and its bundled GPL components are distributed with their corresponding sources and build recipes in the [preview release](https://github.com/AmedeoSaadMichel/easycat-releases/releases/tag/v0.1.0-preview.4). Rust dependency source archives and license notices are provided there as well. Preserve these materials when redistributing the packages; third-party license rights remain intact.
+The application source remains private. FFmpeg and its bundled GPL components are distributed with their corresponding sources and build recipes in the [preview release](https://github.com/AmedeoSaadMichel/easycat-releases/releases/tag/v0.1.0-preview.5). Rust dependency source archives and license notices are provided there as well. Preserve these materials when redistributing the packages; third-party license rights remain intact.
 
 ## Update checks
 
-Preview 4 is the first update-aware build. It checks the public release policy at startup and through the **Updates** button. An available update can be postponed; a build below the platform minimum requires an update after any running export finishes. Failed checks preserve offline use. Download buttons open the release page; installation is manual or through Homebrew.
+Update checks were introduced in preview 4. In preview 5, easycat checks the public release policy at startup. The **Updates** button appears only when an update is available or the check failed; it stays hidden when current. An available update can be postponed; a build below the platform minimum requires an update after any running export finishes. Failed checks preserve offline use. Download buttons open the release page; installation is manual or through Homebrew.
 
-The policy is in [updates.json](updates.json). It starts with latest build 4 and minimum build 4 on all three platforms. Preview 3 and earlier have no checker: install preview 4 manually or through Homebrew to receive future notifications. Linux requires `/usr/bin/curl` for checks; if unavailable the app remains usable. No media or file paths are sent; GitHub receives normal request connection metadata.
+The policy is in [updates.json](updates.json). The latest build is 5 and the minimum remains 4 on all three platforms. Preview 5 is an optional update for preview 4 users. Preview 3 and earlier have no checker: install preview 5 manually or through Homebrew to receive future notifications. Linux requires `/usr/bin/curl` for checks; if unavailable the app remains usable. No media or file paths are sent; GitHub receives normal request connection metadata.
