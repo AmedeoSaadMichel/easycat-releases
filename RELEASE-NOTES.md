@@ -8,7 +8,7 @@
 Application source: https://github.com/AmedeoSaadMichel/easycat/tree/v0.1.0-preview.6
 The application source archive attached to this release matches the native application build commit.
 
-This is an optional update: latest build 6, minimum build 4. Update notices preserve offline use if checks fail. Installation remains manual or through Homebrew.
+The live policy now requires build 6 on all platforms (latest build 6, minimum build 6). Preview 4 and 5 must update after a successful check; an already-running export can finish before the update gate applies. The original verification report records the publication-time minimum of 4; the policy was raised afterward without changing release assets. Update notices preserve offline use if checks fail. Installation remains manual or through Homebrew.
 
 Homebrew: `brew update` followed by `brew upgrade --cask easycat`.
 
