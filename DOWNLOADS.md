@@ -9,13 +9,13 @@ Preview 6 publishes easycat under MIT, completes the workspace and CLI rename, a
 | System | Download | Requirements / status |
 | --- | --- | --- |
 | macOS · Apple Silicon | [Download DMG](https://github.com/AmedeoSaadMichel/easycat-releases/releases/download/v0.1.0-preview.6/easycat-0.1.0-macos-arm64-legal-preview.dmg) | macOS 15 or later · preview build |
-| macOS · Intel | Not available yet | No Intel or universal package has been built or tested |
+| macOS · Intel | [Download Intel DMG](https://github.com/AmedeoSaadMichel/easycat-releases/releases/download/v0.1.0-preview.6/easycat-0.1.0-macos-x86_64-legal-preview.dmg) | Intel x86_64 · macOS 15 or later · natively tested preview |
 | Windows · x64 | [Download portable ZIP](https://github.com/AmedeoSaadMichel/easycat-releases/releases/download/v0.1.0-preview.6/easycat-0.1.0-windows-x64-legal-preview.zip) | Windows 10/11 x64 · unsigned preview |
 | Linux · x64 | [Download portable tar.gz](https://github.com/AmedeoSaadMichel/easycat-releases/releases/download/v0.1.0-preview.6/easycat-0.1.0-linux-x86_64-legal-preview.tar.gz) | glibc 2.35+ / Ubuntu 22.04+ · desktop with OpenGL |
 
-[Release details and files](https://github.com/AmedeoSaadMichel/easycat-releases/releases/tag/v0.1.0-preview.6) · [SHA-256 checksum](https://github.com/AmedeoSaadMichel/easycat-releases/releases/download/v0.1.0-preview.6/SHA256SUMS) · [Report a problem](https://github.com/AmedeoSaadMichel/easycat-releases/issues)
+[Release details and files](https://github.com/AmedeoSaadMichel/easycat-releases/releases/tag/v0.1.0-preview.6) · [SHA-256 checksum](https://github.com/AmedeoSaadMichel/easycat-releases/releases/download/v0.1.0-preview.6/SHA256SUMS) · [Intel SHA-256 checksums](https://github.com/AmedeoSaadMichel/easycat-releases/releases/download/v0.1.0-preview.6/SHA256SUMS-INTEL) · [Report a problem](https://github.com/AmedeoSaadMichel/easycat-releases/issues)
 
-Packages are compiled and tested on native CI runners. Windows desktop interaction still needs hands-on validation; Linux startup/rendering is checked under Xvfb. Intel Mac packages will receive download links when ready. Public downloads and corresponding third-party sources are hosted in a separate distribution repository; the application source is available under [MIT](https://github.com/AmedeoSaadMichel/easycat/blob/main/LICENSE) in [easycat](https://github.com/AmedeoSaadMichel/easycat).
+Packages are compiled and tested on native CI runners. Windows desktop interaction still needs hands-on validation; Linux startup/rendering is checked under Xvfb. Intel builds are compiled and tested on a native macOS Intel runner. Public downloads and corresponding third-party sources are hosted in a separate distribution repository; the application source is available under [MIT](https://github.com/AmedeoSaadMichel/easycat/blob/main/LICENSE) in [easycat](https://github.com/AmedeoSaadMichel/easycat).
 
 ## Install on macOS
 
@@ -29,7 +29,7 @@ The package includes FFmpeg, ffprobe, ffplay and their required libraries. Homeb
 
 ### Install with Homebrew
 
-On Apple Silicon with macOS 15 or later, add the public personal tap once, then install easycat:
+On Apple Silicon or Intel with macOS 15 or later, add the public personal tap once, then install easycat:
 
 ```sh
 brew tap AmedeoSaadMichel/easycat https://github.com/AmedeoSaadMichel/easycat-releases.git
@@ -101,4 +101,4 @@ The application source is available under the [MIT License](https://github.com/A
 
 Update checks were introduced in preview 4. In preview 6, easycat checks the public release policy at startup. The **Updates** button appears only when an update is available or the check failed; it stays hidden when current. An available update can be postponed; a build below the platform minimum requires an update after any running export finishes. Failed checks preserve offline use. Download buttons open the release page; installation is manual or through Homebrew.
 
-The policy is in [updates.json](updates.json). The latest build and minimum supported build are both 6 on all three platforms. Preview 4 and 5 require an update after a successful check; any running export can finish before the update gate applies. Preview 3 and earlier have no checker: install preview 6 manually or through Homebrew to receive future notifications. Linux requires `/usr/bin/curl` for checks; if unavailable the app remains usable. No media or file paths are sent; GitHub receives normal request connection metadata.
+The policy is in [updates.json](updates.json). The latest build and minimum supported build are both 6 on all four platforms. Preview 4 and 5 require an update after a successful check; any running export can finish before the update gate applies. Preview 3 and earlier have no checker: install preview 6 manually or through Homebrew to receive future notifications. Linux requires `/usr/bin/curl` for checks; if unavailable the app remains usable. No media or file paths are sent; GitHub receives normal request connection metadata.
