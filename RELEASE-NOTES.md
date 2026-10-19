@@ -1,16 +1,19 @@
-# easycat 0.1.0 preview 5
+# easycat 0.1.0 preview 6
 
-- Hides the Updates button when easycat is already current and while checking.
-- Keeps Updates available when a newer build exists or a failed check can be retried.
-- Preserves optional update notices, minimum-build enforcement and offline use when checks fail.
-- Keeps development-only update simulations out of all distributed release executables.
+- Publishes easycat as open source under the MIT License.
+- Renames workspace folders, Rust packages and the CLI from easycut to easycat.
+- Includes the application MIT license in all platform packages.
+- Rebuilds and verifies native macOS Apple Silicon, Windows x64 and Linux x86_64 packages.
 
-The policy advances to latest build 5 with minimum build 4 after downloads are verified. Preview 4 users receive an optional update; no new mandatory upgrade is introduced. Preview 3 and earlier need a manual update because they predate the checker.
+Application source: https://github.com/AmedeoSaadMichel/easycat/tree/v0.1.0-preview.6
+The application source archive attached to this release matches the native application build commit.
+
+This is an optional update: latest build 6, minimum build 4. Update notices preserve offline use if checks fail. Installation remains manual or through Homebrew.
 
 Homebrew: `brew update` followed by `brew upgrade --cask easycat`.
 
-Native packages for macOS Apple Silicon, Windows x64 and Linux x86_64. App source remains private. Codec binaries, bundled libraries, third-party licenses and corresponding source archives are preserved from the verified preview 4 bundles.
+Codec binaries, bundled libraries and existing third-party license files are preserved byte-for-byte from verified preview 5 bundles. The corresponding third-party source archives are included alongside the installers with unchanged checksums. Application MIT licensing does not replace third-party licenses.
 
-Preview limits remain: macOS 15+, ad-hoc signed and not notarized; Windows x64 unsigned; Linux x86_64 glibc 2.35+ and an OpenGL-capable desktop. Linux update checks require /usr/bin/curl; missing clients preserve local use. No automatic installation, media uploads or telemetry.
+Preview limits: macOS Apple Silicon, macOS 15+, ad-hoc signed and not notarized; Windows x64 unsigned, without manual interactive GUI certification; Linux x86_64 glibc 2.35+ and an OpenGL-capable desktop. Linux update checks require /usr/bin/curl; missing clients preserve local use. No automatic installation, media uploads or telemetry.
 
-See RELEASE-VERIFICATION.json for validation scope and SHA256SUMS for installer/source archive checksums.
+See RELEASE-VERIFICATION.json for the validation scope and SHA256SUMS for installer and source archive checksums.
