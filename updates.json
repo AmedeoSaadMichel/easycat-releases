@@ -20,6 +20,16 @@
       "latest_build": 6,
       "minimum_build": 6,
       "version": "0.1.0-preview.6"
+    },
+    "ios": {
+      "latest_build": 1,
+      "minimum_build": 1,
+      "version": "0.1.0"
+    },
+    "android": {
+      "latest_build": 1,
+      "minimum_build": 1,
+      "version": "0.1.0"
     }
   }
 }
